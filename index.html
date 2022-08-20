@@ -19,14 +19,47 @@
         }
         
         .header {
-            font-family: "genzschetheyse";
+            font-family: "genzschetheyse", monospace;
             font-size: 13rem;
             color: black;
+        }
+        
+        .link {
+            
         }
         
     </style>
 </head>
 <body>
 <h2 class="text-center header">Worm Tomb</h2>
+<div class="text-center">
+<canvas id="Lines" width="700" height="50"></canvas>
+</div>
+<script>
+    const canvas = document.getElementById('Lines');
+    
+    //Always check for properties and methods, to make sure your code doesn't break in other browsers.
+    if (canvas.getContext)
+    {
+        const context = canvas.getContext('2d');
+        
+        context.beginPath();
+        
+        context.lineWidth = 10;
+        context.moveTo(0,0);
+        context.lineTo(700,0);
+        context.stroke();
+
+        context.lineWidth = 4;
+        context.moveTo(20,13);
+        context.lineTo(680,13);
+        context.stroke();
+    }
+    
+</script>
+
+<div>
+    
+</div>
 </body>
 </html>
