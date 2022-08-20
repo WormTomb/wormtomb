@@ -17,6 +17,14 @@
                     url('../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff') format('woff');,
                     url('../wormtomb/assets/fonts/GenzschEtHeyse/GenzschEtHeyse.ttf') format('truetype');
         }
+
+        @font-face {
+            font-family: 'kaiseiopti';
+            src:
+                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff2') format('woff2'),
+                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff') format('woff');,
+                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti.ttf') format('truetype');
+        }
         
         .header {
             font-family: "genzschetheyse", monospace;
@@ -25,7 +33,10 @@
         }
         
         .link {
-            
+            font-family: kaiseiopti, monospace;
+            font-size: 2.5rem;
+            color: black;
+            align-self: flex-start;
         }
         
     </style>
@@ -38,7 +49,6 @@
 <script>
     const canvas = document.getElementById('Lines');
     
-    //Always check for properties and methods, to make sure your code doesn't break in other browsers.
     if (canvas.getContext)
     {
         const context = canvas.getContext('2d');
@@ -58,8 +68,10 @@
     
 </script>
 
-<div>
-    
+<div class="text-center">
+    <a class="link" href>Gallery</a>
+    <br>
+    <a class="link" href>Contact</a>
 </div>
 </body>
 </html>
