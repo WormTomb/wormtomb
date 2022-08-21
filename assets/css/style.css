@@ -47,6 +47,13 @@ body {
     margin: 25rem;
 }
 
+.contact-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 5rem;
+    align-content: center;
+}
+
 .index-links {
     grid-column: 1;
     display: grid;
@@ -60,6 +67,31 @@ body {
     align-content: center;
 }
 
+.contact-link {
+    grid-column: 1;
+    align-content: center;
+    justify-content: center;
+    font-family: kaiseiopti, monospace;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.contact-img {
+    grid-column: 2;
+}
+
+.contact-img:hover {
+    opacity: 0.8;
+}
+
 .single-img {
     max-width: 40rem;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
