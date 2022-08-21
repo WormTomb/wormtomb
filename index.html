@@ -1,77 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<link rel="stylesheet" href="../wormtomb/assets/css/style.css" type="text/css">
+
 <head>
     <meta charset="UTF-8">
     <title>Worm Tomb</title>
-    <style>
-        
-        body {
-            background-color: #A97D48;
-        }
-        
-        @font-face {
-            font-family: 'genzschetheyse';
-            src: 
-                    url('../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff2') format('woff2'),
-                    url('../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff') format('woff');,
-                    url('../wormtomb/assets/fonts/GenzschEtHeyse/GenzschEtHeyse.ttf') format('truetype');
-        }
-
-        @font-face {
-            font-family: 'kaiseiopti';
-            src:
-                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff2') format('woff2'),
-                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff') format('woff');,
-                    url('../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti.ttf') format('truetype');
-        }
-        
-        .header {
-            font-family: "genzschetheyse", monospace;
-            font-size: 13rem;
-            color: black;
-        }
-        
-        .link {
-            font-family: kaiseiopti, monospace;
-            font-size: 2.5rem;
-            color: black;
-            align-self: flex-start;
-        }
-        
-    </style>
 </head>
 <body>
-<h2 class="text-center header">Worm Tomb</h2>
+<a href="index.html"><h2 class="text-center header">Worm Tomb</h2></a>
 <div class="text-center">
 <canvas id="Lines" width="700" height="50"></canvas>
 </div>
-<script>
-    const canvas = document.getElementById('Lines');
-    
-    if (canvas.getContext)
-    {
-        const context = canvas.getContext('2d');
-        
-        context.beginPath();
-        
-        context.lineWidth = 10;
-        context.moveTo(0,0);
-        context.lineTo(700,0);
-        context.stroke();
 
-        context.lineWidth = 4;
-        context.moveTo(20,13);
-        context.lineTo(680,13);
-        context.stroke();
-    }
-    
-</script>
-
+<script src="../wormtomb/assets/scripts/lines.js"></script>
 <div class="text-center">
-    <a class="link" href>Gallery</a>
-    <br>
-    <a class="link" href>Contact</a>
-</div>
+    <div>
+        <a class="link" href="gallery.html">Gallery</a>
+        <a class="link" href="contact.html">Contact</a>
+    </div>
+    <div class="text-center">
+    <img class="single-image" src="../wormtomb/assets/img/dragon.jpg" alt="Forrest Fenske">
+    </div>
+    </div>
 </body>
 </html>

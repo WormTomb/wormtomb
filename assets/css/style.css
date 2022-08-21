@@ -1,0 +1,39 @@
+body {
+    background-color: #A97D48;
+}
+
+@font-face {
+    font-family: 'genzschetheyse';
+    src:
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff2') format('woff2'),
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff') format('woff');,
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/GenzschEtHeyse.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kaiseiopti';
+    src:
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff2') format('woff2'),
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff') format('woff');,
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti.ttf') format('truetype');
+}
+
+.header {
+    font-family: "genzschetheyse", monospace;
+    font-size: 13rem;
+    color: black;
+}
+
+.link {
+    font-family: kaiseiopti, monospace;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: underline;
+    margin: 5rem;
+}
+
+.single-image {
+    max-width: 60%;
+    max-height:40rem;
+    margin: 5rem;
+}
