@@ -1,0 +1,146 @@
+body {
+    background-color: #A97D48;
+}
+
+@font-face {
+    font-family: 'genzschetheyse';
+    src:
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff2') format('woff2'),
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/genzschetheyse-webfont.woff') format('woff');,
+            url('../../../wormtomb/assets/fonts/GenzschEtHeyse/GenzschEtHeyse.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kaiseiopti';
+    src:
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff2') format('woff2'),
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti-Regular.woff') format('woff');,
+            url('../../../wormtomb/assets/fonts/KaiseiOpti/KaiseiOpti.ttf') format('truetype');
+}
+
+.header {
+    font-family: 'genzschetheyse', monospace;
+    font-size: 13rem;
+    color: black;
+}
+
+.sub-header {
+    font-family: 'kaiseiopti', monospace;
+    font-size: 4rem;
+    color: black;
+}
+
+.link {
+    font-family: kaiseiopti, monospace;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.index-container {
+    display: grid;
+    grid-gap: 10rem;
+    align-content: center;
+    justify-content: center;
+    margin: 25rem;
+}
+
+.contact-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 5rem;
+    align-content: center;
+}
+
+.index-links {
+    grid-column: 1;
+    display: grid;
+    justify-content: left;
+    align-content: center;
+}
+
+.index-img {
+    grid-column: 2;
+    justify-content: right;
+    align-content: center;
+}
+
+.contact-link {
+    grid-column: 1;
+    align-content: center;
+    justify-content: center;
+    font-family: kaiseiopti, monospace;
+    font-size: 2.5rem;
+    color: black;
+    text-decoration: underline;
+}
+
+.contact-img {
+    grid-column: 2;
+}
+
+.contact-img:hover {
+    opacity: 0.8;
+}
+
+.single-img {
+    max-width: 40rem;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    align-content: center;
+    justify-content: center;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    padding: 2px;
+    background-color: #000000;
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.gallery-links {
+    margin-bottom: 5rem;
+    align-content: center;
+    justify-content: center;
+}
