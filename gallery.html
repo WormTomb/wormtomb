@@ -9,44 +9,47 @@
 </head>
 <body>
 
-<a href="index.html"><h2 class="text-center header">Worm Tomb</h2></a>
+<a class="link" href="index.html"><h2 class="text-center header">Worm Tomb</h2></a>
+
 <div class="text-center">
-    <canvas id="Lines" width="700" height="50"></canvas>
+    <canvas id="Lines" width="700" height="15"></canvas>
 </div>
 
-<script src="../wormtomb/assets/scripts/lines.js"></script>
-
-<div class="links text-center">
-    <a class="link" href="index.html">Home</a>
-    <a class="link" href="contact.html">Contact</a>
+<div class="nav-links text-center">
+    <a class="link margins" href="index.html">Home</a>
+    <a class="link margins">Gallery</a>
+    <a class="link margins" href="contact.html">Contact</a>
 </div>
 
-<br>
-<br>
-
-<div class="row">
-
-    <div class="column">
-        <img src="../wormtomb/assets/img/gallery/doug_sparks.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/small_dragon.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/gargo_saul.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/mr_chowder.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/crab.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/dragon_1.jpeg" alt="gallery">
+<div class="worm-tomb-gallery">
+    <div class="image-box">
+        <img id="img-Box" src="../wormtomb/assets/img/gallery/doug_sparks.jpeg"
+             alt="click here">
+    </div>
+    <div class="gallery-elements">
+        <img src="../wormtomb/assets/img/gallery/doug_sparks.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/small_dragon.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/gargo_saul.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/mr_chowder.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/crab.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/dragon_1.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/lantern_1.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/lantern_2.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/lantern_3.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/lantern_4.jpeg" alt="gallery" onclick="inspectImage(this)">
+        <img src="../wormtomb/assets/img/gallery/dragon_2.jpeg" alt="gallery" onclick="inspectImage(this)">
     </div>
 
-    <div class="column">
-        <img src="../wormtomb/assets/img/gallery/lantern_1.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/lantern_2.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/lantern_3.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/lantern_4.jpeg" alt="gallery">
-        <img src="../wormtomb/assets/img/gallery/dragon_2.jpeg" alt="gallery">
-    
-    </div>
 </div>
+
+<script>
+    function inspectImage(productSmallImg) {
+        const productFullImg = document.getElementById("img-Box");
+        productFullImg.src = productSmallImg.src;
+    }
+</script>
 
 <script src="../wormtomb/assets/scripts/bootstrap.bundle.min.js"></script>
-<script src="../wormtomb/assets/scripts/gallery.js"></script>
 
 </body>
 </html>
