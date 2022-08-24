@@ -35,8 +35,7 @@ body {
     font-size: 2.5rem;
     color: black;
     text-decoration: underline;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 3rem;
 }
 
 .index-container {
@@ -61,6 +60,11 @@ body {
     align-content: center;
 }
 
+.nav-links {
+    justify-content: center;
+    align-content: center;
+}
+
 .index-img {
     grid-column: 2;
     justify-content: right;
@@ -79,10 +83,6 @@ body {
 
 .contact-img {
     grid-column: 2;
-}
-
-.contact-img:hover {
-    opacity: 0.8;
 }
 
 .single-img {
