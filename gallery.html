@@ -21,35 +21,41 @@
     <a class="link margins" href="contact.html">Contact</a>
 </div>
 
-<div class="worm-tomb-gallery">
-    <div class="image-box">
-        <img id="img-Box" src="../wormtomb/assets/img/gallery/doug_sparks.jpeg"
-             alt="click here">
-    </div>
-    <div class="gallery-elements">
-        <img src="../wormtomb/assets/img/gallery/doug_sparks.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/small_dragon.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/gargo_saul.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/mr_chowder.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/crab.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/dragon_1.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/lantern_1.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/lantern_2.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/lantern_3.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/lantern_4.jpeg" alt="gallery" onclick="inspectImage(this)">
-        <img src="../wormtomb/assets/img/gallery/dragon_2.jpeg" alt="gallery" onclick="inspectImage(this)">
-    </div>
-
+<div class="text-center">
+    <canvas class="gallery-canvas" id="unity-canvas" width="800" height="600" style="width: 80%; height: 80%; background: #A97D48"></canvas>
 </div>
 
+<script src="../wormtomb/assets/Build/WormTombGallery.loader.js"></script>
 <script>
-    function inspectImage(productSmallImg) {
-        const productFullImg = document.getElementById("img-Box");
-        productFullImg.src = productSmallImg.src;
-    }
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "../wormtomb/assets/Build/WormTombGallery.data",
+        frameworkUrl: "../wormtomb/assets/Build/WormTombGallery.framework.js",
+        codeUrl: "../wormtomb/assets/Build/WormTombGallery.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "BramblyMead",
+        productName: "WormTombGallery",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+    });
 </script>
 
-<script src="../wormtomb/assets/scripts/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('wheel', onScroll, false);
+    document.addEventListener('mousemove', onMouse, false);
+    
+    const content = document.getElementsByClassName('gallery-canvas');
+
+    function onMouse() 
+    { 
+        content[0].style['pointer-events'] = 'auto'; 
+    }
+    
+    function onScroll() 
+    { 
+        content[0].style['pointer-events'] = 'none'; 
+    }
+</script>
 
 </body>
 </html>
