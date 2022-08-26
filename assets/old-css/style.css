@@ -74,13 +74,14 @@ body {
 }
 
 .margins {
-    margin: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
 }
 
 .nav-links {
     justify-content: center;
     align-content: center;
-    margin-bottom: 3rem;
 }
 
 .max-width {

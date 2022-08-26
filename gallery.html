@@ -21,41 +21,15 @@
     <a class="link margins" href="contact.html">Contact</a>
 </div>
 
+<br>
+
 <div class="text-center">
-    <canvas class="gallery-canvas" id="unity-canvas" width="800" height="600" style="width: 80%; height: 80%; background: #A97D48"></canvas>
+    <canvas class="gallery-canvas" id="unity-canvas" width="800" height="600" style="width: 70%; height: 70%; background: #A97D48"></canvas>
 </div>
+<br>
 
 <script src="../wormtomb/assets/Build/WormTombGallery.loader.js"></script>
-<script>
-    createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "../wormtomb/assets/Build/WormTombGallery.data",
-        frameworkUrl: "../wormtomb/assets/Build/WormTombGallery.framework.js",
-        codeUrl: "../wormtomb/assets/Build/WormTombGallery.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "BramblyMead",
-        productName: "WormTombGallery",
-        productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-    });
-</script>
-
-<script>
-    document.addEventListener('wheel', onScroll, false);
-    document.addEventListener('mousemove', onMouse, false);
-    
-    const content = document.getElementsByClassName('gallery-canvas');
-
-    function onMouse() 
-    { 
-        content[0].style['pointer-events'] = 'auto'; 
-    }
-    
-    function onScroll() 
-    { 
-        content[0].style['pointer-events'] = 'none'; 
-    }
-</script>
+<script src="../wormtomb/assets/scripts/gallery.js"></script>
 
 </body>
 </html>
