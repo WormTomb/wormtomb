@@ -88,6 +88,10 @@ body {
     max-width: 40rem;
 }
 
+.contact-img {
+    max-height: 450px;
+}
+
 figcaption {
     text-align: center;
     color: black;
