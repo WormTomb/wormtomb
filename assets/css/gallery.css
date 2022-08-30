@@ -1,0 +1,14 @@
+.slider {
+    text-align: center;
+}
+
+.slide {
+    margin: auto;
+    max-width: 900px;
+    max-height: 500px;
+}
+
+.side-margins {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
