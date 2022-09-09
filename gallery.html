@@ -18,58 +18,148 @@
     <a class="link margins" href="contact.html">Contact</a>
 </div>
 
-<div class="slider margins">
+    <div class="slider margins">
+        <button class="w3-button w3-display-left side-margins" onclick="galleryButtonClicked(-1)">&#10094;</button>
+        <button id="play-button" class="side-margins" onclick="startAutoPlay()">Auto-Play</button>
+        <button class="w3-button w3-display-right side-margins" onclick="galleryButtonClicked(+1)">&#10095;</button>
+    <img class="slide" src="../wormtomb/assets/img/gallery/action-shot-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/blacksmith-grayscale-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/crab-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/creature-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/dragon-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/dragon-2.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/dragon-3.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/guardian-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/guardian-2.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/hanging-art-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/hanging-lantern-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/hooks-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/hooks-2.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/idol-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/idol-2.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/lantern-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/lantern-2.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/lantern-3.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/lantern-4.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/mr-volcano-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/pendant-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/small-dragon-1.jpg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/treasure-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/wares-table-1.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/wares-table-2.jpeg" alt="">
+    <img class="slide" src="../wormtomb/assets/img/gallery/wares-table-3.jpeg" alt="">
 
-    <img class="slide" src="../wormtomb/assets/img/gallery/dgobgvihoyex2z9cqlub.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/gfftfmfybdem3i2txkg3.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/hioq5iq881iqzhevc9bu.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/j5qpovg24avcwfrcrsaf.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/k1rq7uox9zlkl7vlwqdr.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/l8jlfg9xbo58pcykcmwn.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/qi1csecqbyiwpgvrq4qz.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/rdgbtkbujbrlsfgqwu6q.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/thlt6zcvtoojycvn8rmz.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/wxqef8epyodr8vi3cxdw.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/yeetjqke2mfs5ery4cne.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/yunceb4kctdi8hewdvjx.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/zwooel0ljqn76bubdque.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/zwzslkolfqanl2knu9uj.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/zy3ckbpmwsgx6lqyiawk.jpg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06905.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06906.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06909.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06912.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06915.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06921.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06923.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06924.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06927.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06935.jpeg" alt="">
-    <img class="slide" src="../wormtomb/assets/img/gallery/DSC06939.jpeg" alt="">
-    <br>
-    <button class="w3-button w3-display-left side-margins" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right side-margins" onclick="plusDivs(+1)">&#10095;</button>
-    
 </div>
 
 <script>
-    var slideIndex = 1;
+    const SLIDE_CONTAINER = document.getElementsByClassName("slide");
+    const SLIDE_LENGTH = SLIDE_CONTAINER.length;
+    
+    const PLAY_BUTTON = document.getElementById("play-button");
+    
+    const AUTO_PROGRESS_INTERVAL = 5000;
+    
+    let slideIndex = 1;
+    let currentSlide = null;
+    let fadeInInterval = null;
+    let fadeOutInterval = null;
+    let autoPlayInterval = null;
+    let fadeOutEl;
+    let fadeInEl;
+    
+    for (let i = 0; i < SLIDE_LENGTH; i++) {
+        hideElement(SLIDE_CONTAINER[i]);
+    }
+    
     showDivs(slideIndex);
 
-    function plusDivs(n) {
+    startAutoPlay();
+    
+    function startAutoPlay() {
+        PLAY_BUTTON.style.display = "none";
+        autoPlayInterval = window.setInterval(progressSlide, AUTO_PROGRESS_INTERVAL);
+    }
+    
+    function progressSlide() {
+        showDivs(slideIndex += 1);
+    }
+    
+    function galleryButtonClicked(n) {
+        PLAY_BUTTON.style.display = "inline";
+        window.clearInterval(autoPlayInterval);
+        window.clearInterval(fadeInInterval);
+        window.clearInterval(fadeOutInterval);
+        
+        if (fadeOutEl) {
+            element.style.opacity = 0;
+            element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+            element.style.display = "none";
+            fadeOutEl = null;
+        }
+        
+        if (fadeInEl) {
+            element.style.opacity = 1;
+            element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+            element.style.display = "block";
+            fadeInEl = null;
+        }
         showDivs(slideIndex += n);
     }
 
     function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("slide");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+        if (n > SLIDE_LENGTH) {
+            slideIndex = 1
         }
-        x[slideIndex-1].style.display = "block";
+        
+        if (n < 1) {
+            slideIndex = SLIDE_LENGTH
+        }
+
+        if (currentSlide) {
+            fadeOut(currentSlide);
+        }
+
+        currentSlide = SLIDE_CONTAINER[slideIndex - 1];
+        fadeIn(currentSlide);
     }
+    
+    function hideElement(slide) {
+        slide.style.display = "none";
+    }
+
+    function fadeOut(element) {
+        let opacity = 1;
+        fadeOutEl = element;
+        fadeOutInterval = setInterval(function () {
+            if (opacity <= 0.01) {
+                hideElement(element);
+                fadeOutEl = null;
+                clearInterval(fadeOutInterval);
+            }
+            element.style.opacity = opacity;
+            element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+            opacity -= opacity * 0.1;
+        }, 5);
+    }
+
+    function fadeIn(element) {
+        let opacity = 0.01;
+        fadeInEl = element;
+        element.style.opacity = opacity;
+        element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+        element.style.display = "block";
+        
+        fadeInInterval = setInterval(function () {
+            if (opacity >= 1) {
+                fadeInEl = null;
+                clearInterval(fadeInInterval);
+            }
+            element.style.opacity = opacity;
+            element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+            opacity += opacity * 0.1;
+        }, 5);
+    }
+    
 </script>
 <br>
 

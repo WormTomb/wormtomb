@@ -2,10 +2,18 @@
     text-align: center;
 }
 
+.slider img {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    right: 200px;
+}
+
 .slide {
     margin: auto;
     max-width: 900px;
     max-height: 500px;
+    position: relative;
 }
 
 .side-margins {
