@@ -18,10 +18,11 @@
     <a class="link margins" href="contact.html">Contact</a>
 </div>
 
-    <div class="slider margins">
-        <button class="w3-button w3-display-left side-margins" onclick="galleryButtonClicked(-1)">&#10094;</button>
-        <button id="play-button" class="side-margins" onclick="startAutoPlay()">Auto-Play</button>
-        <button class="w3-button w3-display-right side-margins" onclick="galleryButtonClicked(+1)">&#10095;</button>
+<div class="slider margins">
+        <div id="counter"></div>
+        <button class="w3-button w3-display-left text-center" onclick="galleryButtonClicked(-1)">&#10094;</button>
+        <button id="play-button" class="text-center" onclick="startAutoPlay()">Auto-Play</button>
+        <button class="w3-button w3-display-right text-center" onclick="galleryButtonClicked(+1)">&#10095;</button>
     <img class="slide" src="../wormtomb/assets/img/gallery/action-shot-1.jpg" alt="">
     <img class="slide" src="../wormtomb/assets/img/gallery/blacksmith-grayscale-1.jpg" alt="">
     <img class="slide" src="../wormtomb/assets/img/gallery/crab-1.jpg" alt="">
@@ -56,6 +57,7 @@
     const SLIDE_LENGTH = SLIDE_CONTAINER.length;
     
     const PLAY_BUTTON = document.getElementById("play-button");
+    const COUNTER = document.getElementById("counter");
     
     const AUTO_PROGRESS_INTERVAL = 5000;
     
@@ -76,7 +78,7 @@
     startAutoPlay();
     
     function startAutoPlay() {
-        PLAY_BUTTON.style.display = "none";
+        PLAY_BUTTON.disabled = true;
         autoPlayInterval = window.setInterval(progressSlide, AUTO_PROGRESS_INTERVAL);
     }
     
@@ -85,7 +87,7 @@
     }
     
     function galleryButtonClicked(n) {
-        PLAY_BUTTON.style.display = "inline";
+        PLAY_BUTTON.disabled = false;
         window.clearInterval(autoPlayInterval);
         window.clearInterval(fadeInInterval);
         window.clearInterval(fadeOutInterval);
@@ -118,7 +120,7 @@
         if (currentSlide) {
             fadeOut(currentSlide);
         }
-
+        COUNTER.innerText = slideIndex + "/" + SLIDE_LENGTH;
         currentSlide = SLIDE_CONTAINER[slideIndex - 1];
         fadeIn(currentSlide);
     }
