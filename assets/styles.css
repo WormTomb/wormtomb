@@ -1,13 +1,15 @@
 h1 {
 	text-align: center;
+	font-family: kaiseiopti;
 }
 
 body {
-	background-image: url();
+	background-image: url(img/pendant-1.jpeg);
 }
 
 .home {
 	width: 80%;
+	max-width: 500px;
 	background-color: burlywood;
 	margin-left: auto;
 	margin-right: auto;
